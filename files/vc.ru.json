@@ -1,0 +1,79 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1.content-title"
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "vc.ru"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": ".l-entry__content"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".l-entry__content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".content-info"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".booster-promo"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".andropov_image",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-image-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".gall__item",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getBackgroundImage",
+                                            "query": "self"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

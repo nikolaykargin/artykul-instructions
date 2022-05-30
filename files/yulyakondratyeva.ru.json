@@ -1,0 +1,29 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        },
+        "site": {
+            "title": {
+                "@": "getText",
+                "query": "#e2-blog-title"                
+            },
+            "image": {
+                "@": "getAttribute",
+                "query": ".e2-user-picture-image",
+                "attribute": "src"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article .e2-note-text"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .e2-note-text"
+        }
+    ]
+}

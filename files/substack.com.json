@@ -1,0 +1,30 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".post-header table"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".post-header h3.subtitle"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".post-footer"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".post-end-cta-full"
+                }
+            ]
+        }
+    ]
+}

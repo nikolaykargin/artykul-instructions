@@ -1,0 +1,9 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#content .c-entry-content",
+            "beforeReturn": []
+        }
+    ]
+}

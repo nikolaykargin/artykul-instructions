@@ -1,0 +1,37 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.article__body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article__author-unit"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".drop-capped"
+                }
+            ]
+        },
+        {
+            "@": "getElement",
+            "#": "News articles",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-component=\"media-block\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".visually-hidden"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.article__content .article-story-content .article-story-content__elements",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".inline-html-banner"
+                }
+            ]
+        }
+    ]
+}

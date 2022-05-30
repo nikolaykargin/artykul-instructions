@@ -1,0 +1,27 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "getAttribute",
+                "query": "header .header-card_avatar",
+                "attribute": "src"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".social-button"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-meta"
+                }
+            ]
+        }
+    ]
+}

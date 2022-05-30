@@ -1,0 +1,9 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article div[data-gu-name=\"data-gu-name\"]",
+            "beforeReturn": []
+        }
+    ]
+}

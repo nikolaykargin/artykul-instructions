@@ -1,0 +1,18 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article.article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.article .article__body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "figure.incut"
+                }
+            ]
+        }
+    ]
+}

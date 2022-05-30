@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://tuzovpavel.ru/wp-content/uploads/2020/08/Tuzov-Profile-BW-279x300.jpg"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".post-content",
+            "beforeReturn": []
+        }
+    ]
+}

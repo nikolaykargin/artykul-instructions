@@ -1,0 +1,52 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "article .article-body-container",
+                "article .article-body"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".social-icons"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-sharing"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".print-tips"
+                },
+                {   
+                    "@": "removeElement",
+                    "query": "figcaption small"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "progressive-image",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "meta": {
+        "site": {
+            "title": {
+                "@": "getText",
+                "query": ".blog__info .blog__info_name"
+            },
+            "description": {
+                "@": "getText",
+                "query": ".blog__info .blog__info_bio"
+            },
+            "image": {
+                "@": "getBackgroundImage",
+                "query": ".blog__info .userpic__pic"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article"
+        }
+    ]
+}

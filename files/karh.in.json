@@ -1,0 +1,12 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article.full"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.full"
+        }
+    ]
+}

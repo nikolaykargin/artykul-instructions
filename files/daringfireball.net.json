@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://daringfireball.net/graphics/apple-touch-icon.png"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#Main .article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".dateline"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "#PreviousNext"
+                }
+            ]
+        }
+    ]
+}

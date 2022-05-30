@@ -1,0 +1,22 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://wylsa.com/wp-content/themes/wylsa/img/logo@2x.jpg"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article section.content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".likely"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": "article .tm-article-snippet__meta .tm-user-info__user a"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#post-content-body",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-blurred=\"true\"]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

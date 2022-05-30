@@ -1,0 +1,34 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article .article-title"
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Apple Developer"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .article-text",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-date"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".social-share-container"
+                }
+            ]
+        }
+    ]
+}

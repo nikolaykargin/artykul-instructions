@@ -1,0 +1,57 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".TGN_site_Article_body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".TGN_Article_ReadTimeSection"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "#InfoLinksALPixel"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".TGN_CH_BO_HeroHolder"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".TGN_CH_BO_MenuTitle"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".TGN_CH_BO_MenuHolder"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".TGN_CH_BO_PDFMenuHolder"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

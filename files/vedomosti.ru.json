@@ -1,0 +1,49 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .article__body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".adfox"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".box-inset-link"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-thumbnail]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-thumbnail"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

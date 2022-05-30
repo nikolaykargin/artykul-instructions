@@ -1,0 +1,60 @@
+{
+    "meta": {
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Telegram Blog"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "#dev_page_content"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#dev_page_content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "picture.blog_side_image"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img.icon",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "u",
+                            "content": [
+                                {
+                                    "@": "getAttribute",
+                                    "query": "self",
+                                    "attribute": "alt"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img.emoji",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "span",
+                            "content": [
+                                {
+                                    "@": "getAttribute",
+                                    "query": "self",
+                                    "attribute": "alt"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#articleBody",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".commercial--display"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".content--excerpt"
+                }
+            ]
+        }
+    ]
+}

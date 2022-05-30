@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                }
+            ]
+        }
+    ]
+}

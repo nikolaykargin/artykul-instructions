@@ -1,0 +1,28 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "getElement",
+                "query": "header .user-pic img",
+                "attribute": "src"
+            },
+            "title": {
+                "@": "getText",
+                "query": "header h2"
+            },
+            "description": {
+                "@": "getText",
+                "query": "header h3"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .entry-content",
+            "beforeReturn": [
+                
+            ]
+        }
+    ]
+}

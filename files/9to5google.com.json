@@ -1,0 +1,23 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article .post-meta .byline a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .post-body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".ad-disclaimer-container"
+                }
+            ]
+        }
+    ]
+}

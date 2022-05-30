@@ -1,0 +1,51 @@
+{
+    "meta": {
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Apple"
+            },
+            "image": {
+                "@": "constant",
+                "value": "https://www.apple.com/newsroom/images/default/apple-logo-og.jpg"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article.article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".category,.visuallyhidden,.presscontacts,.docsanddownloads,.article-list,.sharesheet"
+                },
+                {
+                    "#": "The word \"Share\" is on the ignore list",
+                    "@": "replaceElement",
+                    "query": ".image-sharesheet,.image-shareheet-gallery",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "picture"
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

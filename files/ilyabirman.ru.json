@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Блог Ильи Бирмана"
+            },
+            "image": {
+                "@": "constant",
+                "value": "https://ilyabirman.ru/i/ib-2018-90@2x.jpg"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article .e2-note-text"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .e2-note-text"
+        }
+    ]
+}

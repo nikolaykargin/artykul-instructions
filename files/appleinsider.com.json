@@ -1,0 +1,27 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        },
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article .article-hero-social a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                }
+            ]
+        }
+    ]
+}

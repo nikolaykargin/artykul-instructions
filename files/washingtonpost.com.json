@@ -1,0 +1,61 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        },
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "header .print-byline a[data-qa=\"author-name\"]",
+                "separator": ","
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "article[data-qa=\"main\"]",
+                "article"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "div[data-qa=\"article-body-ad\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-qa=\"collections__wrapper\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-qa=\"subscribe-promo\"]"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".pg-graphic[data-fallback-image-url]",                     
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-fallback-image-url"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

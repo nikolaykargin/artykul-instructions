@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".post",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".block-extra"
+                }
+            ]
+        }
+    ]
+}

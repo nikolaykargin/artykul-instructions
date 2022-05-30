@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#l-content .post-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".inline-newsletter-signup"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".summary-list"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-component-type=\"notification-prompt\"]"
+                }
+            ]
+        }
+    ]
+}

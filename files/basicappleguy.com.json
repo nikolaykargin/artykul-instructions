@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".blog-item-meta-wrapper"
+                }
+            ]
+        }
+    ]
+}

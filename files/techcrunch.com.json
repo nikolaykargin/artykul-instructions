@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        },
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": ".article__byline a"
+            }
+        },
+        "publishedTime": {
+            "@": "getAttribute",
+            "query": ".article__byline time",
+            "attribute": "datetime"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.article-container .article-content",
+            "beforeReturn": []
+        }
+    ]
+}

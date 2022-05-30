@@ -1,0 +1,16 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://brianlovin.com/static/meta/apple-touch-icon.png"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".prose"
+        }
+    ]
+}

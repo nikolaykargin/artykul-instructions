@@ -1,0 +1,36 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "separator": ", ",
+                "query": "article header div[class*=\"author-name\"] a"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class*=\"article-body__context_widget\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class*=\"registration-prompt\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class*=\"inline-gallery__detail\"] > span"
+                }
+                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "meta": {
+        "site": {
+            "title": {
+                "@": "getAttribute",
+                "query": "#profile-signup h1",
+                "attribute": "title"
+            },
+            "description": {
+                "@": "getAttribute",
+                "query": "#profile-signup h2",
+                "attribute": "title"
+            },
+            "image": {
+                "@": "getAttribute",
+                "query": "#profile-image img",
+                "attribute": "src"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article #issue-frame"
+        }
+    ]
+}

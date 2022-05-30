@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": ".article__header .contributor__meta a"
+            }
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Vice"            
+            },
+            "image": {
+                "@": "constant",
+                "value": "https://vice-web-statics-cdn.vice.com/favicons/vice/apple-touch-startup-image-320x460.png"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "main.main-content .article__longform__content",
+                "main.main-content .short-form__body"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "div[data-component=\"RelatedArticleBlock\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".adph"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article__tagged"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".user-newsletter-signup, .article-newsletter-signup"
+                }         
+            ]
+        }
+    ]
+}

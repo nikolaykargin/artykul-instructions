@@ -1,0 +1,57 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": ".news-header__title h1"
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Onliner"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": ".news-text"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".news-text",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".news-widget"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".news-media__gallery .news-media__subtitle"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img.swiper-lazy",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

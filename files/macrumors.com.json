@@ -1,0 +1,46 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article div[class*=\"byline\"] a[rel=\"author\"]",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article div[class*=\"content\"]",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "noscript img"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-srcset]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "srcSet",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-srcset"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

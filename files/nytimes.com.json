@@ -1,0 +1,30 @@
+{
+    "meta": {
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "The New York Times"
+            }
+        }
+    },
+    "exists": {
+        "@": "isElementExists",
+        "query": "article#story #articleBody"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article#story #articleBody",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "#top-wrapper"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "#bottom-wrapper"
+                }
+            ]
+        }
+    ]
+}
