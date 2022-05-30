@@ -24,7 +24,7 @@ You can use the debugger to validate instructions without importing them to the 
 
 We recommend using macOS with [Universal Clipboard](https://support.apple.com/en-us/HT209460) feature enabled. Developing instructions on the phone is not a good idea.
 
-Disable JavaScript in your browser; Artikul does not execute JS. The standard developer panel in Safari or Chrome is enough to explore markup. If something goes completely wrong, then install the following user-agent:
+Disable JavaScript in your browser; Artykul does not execute JS. The standard developer panel in Safari or Chrome is enough to explore markup. If something goes completely wrong, then install the following user-agent:
 
 ```
 Artykul/1.0 ALCore/1.0 (like TwitterBot)
