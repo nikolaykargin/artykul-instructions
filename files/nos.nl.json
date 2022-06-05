@@ -1,0 +1,40 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header div[class^=\"headerMetaData_\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "footer"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "blockquote span[class^=\"quoteSymbol_\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class^=\"moreArticlesContainer_\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class^=\"linkContainer_\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".ster-banner"
+                }
+            ]
+        }
+    ]
+}

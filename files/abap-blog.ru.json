@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".entry-content",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": ".urvanov-syntax-highlighter-syntax",
+                    "newElements": [                
+                        {
+                            "@": "getElement",
+                            "query": ".crayon-pre"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
