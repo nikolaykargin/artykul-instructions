@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article.post h1"
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "MacStories"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article.post .post-content"
+        }
+    ]
+}

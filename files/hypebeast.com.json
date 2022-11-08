@@ -1,0 +1,46 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".sponsored-content"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "footer"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".show-article"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".gallery-image-index"
+                },  
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"                            
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".flickity-carousel",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": ".flickity-carousel-cell"                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

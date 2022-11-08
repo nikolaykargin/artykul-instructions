@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".newsletter-cta"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "header"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".bb-pro-homepage-news-river"
+                }
+            ]
+        }
+    ]
+}

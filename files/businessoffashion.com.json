@@ -1,0 +1,28 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://www.businessoffashion.com/pf/resources/favicon.ico?d=118"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

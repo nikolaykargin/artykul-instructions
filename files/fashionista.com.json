@@ -1,0 +1,56 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .m-detail--body",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "phoenix-picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".m-in-content-recommendation"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".m-gallery-invite--info"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".m-gallery-invite--slides"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "phx-gallery-image",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-full-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

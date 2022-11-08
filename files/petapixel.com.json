@@ -1,0 +1,17 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": "article header .post-meta__option span a"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .post-full__text",
+            "beforeReturn": []
+        }
+    ]
+}

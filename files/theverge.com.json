@@ -4,6 +4,24 @@
             "@": "getElement",
             "query": "main.content .c-entry-content",
             "beforeReturn": []
+        },
+        {
+            "@": "getElement",
+            "query": "article#content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-groups"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".hidden"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".duet--article--article-byline, .sr-only, span.text-blurple, h2.inline, h1"
+                }
+            ]
         }
     ]
 }

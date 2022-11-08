@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "noscript"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".topics-list"
+                }
+            ]
+        }
+    ]
+}

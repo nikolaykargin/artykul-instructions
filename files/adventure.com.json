@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": ".content .contributor-name"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-intro"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".contributor"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article header .by-author",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#article-body",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-original-mos]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-original-mos"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "iframe[data-lazy-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "iframe",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-lazy-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

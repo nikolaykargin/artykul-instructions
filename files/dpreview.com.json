@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".articleBody",
+            "beforeReturn": [
+               {
+                   "@": "removeElement",
+                   "query": ".newsStorySlideshowPager"
+               }
+            ]
+        }
+    ]
+}

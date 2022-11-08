@@ -1,0 +1,79 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": ".article__authors .author-name",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".article__content",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-src-lazy]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-src-lazy"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-url-img]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-url-img"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".article__main-img picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article__reference-information, .voiting-big"
+                }
+            ]
+        }
+    ]
+}

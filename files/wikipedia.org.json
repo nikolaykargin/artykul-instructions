@@ -1,0 +1,47 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        },
+        "site": {
+            "title": {
+                "@": "constant",
+                "value": "Wikipedia"
+            },
+            "image": {
+                "@": "getAttribute",
+                "query": "link[rel='apple-touch-icon']",
+                "attribute": "href"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#bodyContent .mw-body-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".hatnote"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".shortdescription"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".mw-editsection"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".toc"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".printfooter"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .entry-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "img.lazy"
+                }
+            ]
+        }
+    ]
+}

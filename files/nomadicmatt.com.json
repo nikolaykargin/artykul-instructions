@@ -1,0 +1,41 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .entry-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".guide-post-box"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "noscript"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-lazy-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-lazy-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

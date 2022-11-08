@@ -1,0 +1,23 @@
+{
+    "meta": {},
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".section-article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "a.inserted-article"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-gallery"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".multimedium-hover"
+                }
+            ]
+        }
+    ]
+}

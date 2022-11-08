@@ -1,0 +1,44 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://www.politico.com/apple-touch-icon-180x180.png"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".article-page",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-leaderboard-adunit"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": ".widget-container",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": ".images-container",
+                            "beforeReturn": [
+                                {
+                                    "@": "replaceElement",
+                                    "query": "button",
+                                    "newElements": [
+                                        {
+                                            "@": "getElement",
+                                            "query": "img"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

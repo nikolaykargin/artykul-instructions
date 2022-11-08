@@ -1,0 +1,61 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "constant",
+                "value": "https://www.slashfilm.com/img/slashfilm.ico"
+            }
+        },
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": "a.byline-author"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".byline-container"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-lazy-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-lazy-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

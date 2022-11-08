@@ -1,0 +1,37 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".article-body-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-email-capture"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-srcset]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "srcset",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-srcset"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

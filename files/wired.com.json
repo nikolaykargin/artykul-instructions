@@ -1,0 +1,33 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "article div[class^=\"ArticlePageChunksContent\"]",
+                "article .body__inner-container"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[class^=\"GenericCalloutWrapper-\"]"
+                }
+            ]
+        }
+    ]
+}

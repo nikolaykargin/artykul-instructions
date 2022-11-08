@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        },
+        "description": {
+            "@": "getAttribute",
+            "query": "meta[property='og:description']",
+            "attribute": "content"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "article .l-article-content",
+                "article"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "header,footer"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "noscript"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".c-featured-article__post-actions"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-lazy-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-lazy-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }        
+    ]
+}
