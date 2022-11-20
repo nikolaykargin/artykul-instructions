@@ -14,7 +14,13 @@
     "content": [
         {
             "@": "getElement",
-            "query": "article.post .post-content"
+            "query": "article.post .post-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".subscribe-podcast-cta"
+                }
+            ]
         }
     ]
 }

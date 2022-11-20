@@ -1,0 +1,36 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "main div[class^=\"MainText_\"]",
+                "main"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "img[data-src]",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

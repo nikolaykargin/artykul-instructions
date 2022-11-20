@@ -1,0 +1,39 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": ".content h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".content .post_content",
+            "beforeReturn": [
+                {
+                    "@": "replaceElement",
+                    "query": "img.lazy",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "data-original"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

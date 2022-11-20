@@ -1,0 +1,11 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .body",
+            "beforeReturn": [
+               
+            ]
+        }
+    ]
+}

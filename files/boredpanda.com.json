@@ -1,0 +1,33 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .post-content",
+            "beforeReturn": [
+                {
+                    "#": "The word \"Share\" is on the ignore list",
+                    "@": "replaceElement",
+                    "query": ".shareable-post-image",
+                    "newElements": [
+                        {
+                            "@": "getElement",
+                            "query": "img"
+                        }
+                    ]
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".open-list-item .post-bottom-meta-links"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".open-list-item .open-list-footer"
+                },
+                { 
+                    "@": "removeElement",
+                    "query": ".modal"
+                }
+            ]
+        }
+    ]
+}

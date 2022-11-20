@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#aws-page-content-main",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".view-all"
+                }
+            ]
+        }
+    ]
+}

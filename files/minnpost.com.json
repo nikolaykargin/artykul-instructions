@@ -1,0 +1,24 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .m-entry-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "img.jetpack-lazy-image"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".acm-ad-container"
+                }
+            ]
+        }
+    ]
+}

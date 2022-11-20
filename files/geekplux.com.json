@@ -1,0 +1,15 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .content",
+            "beforeReturn": []
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .entry-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".author-header"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".entry-meta"
+                }
+            ]
+        }
+    ]
+}

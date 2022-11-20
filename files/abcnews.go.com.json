@@ -1,0 +1,19 @@
+{
+    "exists": {
+        "@": "isElementExists",
+        "query": "article"
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "#": "Unsupported element",
+                    "@": "removeElement",
+                    "query": ".SingleVideo"
+                }
+            ]
+        }
+    ]
+}
