@@ -1,0 +1,9 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .content",
+            "beforeReturn": []
+        }
+    ]
+}

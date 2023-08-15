@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#content-main",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "#post-header"
+                }
+            ]
+        }
+    ]
+}

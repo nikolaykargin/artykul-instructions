@@ -1,0 +1,17 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "#content article .entry-inner",
+                "#content article"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "#jw"
+                }
+            ]
+        }
+    ]
+}

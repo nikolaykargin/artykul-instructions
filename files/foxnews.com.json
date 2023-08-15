@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .article-body",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".control"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".featured-video"
+                }
+            ]
+        }
+    ]
+}

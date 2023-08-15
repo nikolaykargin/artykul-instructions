@@ -1,0 +1,9 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "*[data-widget_type=\"theme-post-content.default\"]",
+            "beforeReturn": []
+        }
+    ]
+}

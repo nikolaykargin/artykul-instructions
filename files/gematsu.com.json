@@ -1,0 +1,27 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article header .post__header-byline .author-byline a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .post__content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "*[data-featherlight]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".carousel"
+                }               
+            ]
+        }
+    ]
+}

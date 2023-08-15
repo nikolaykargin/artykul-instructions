@@ -1,0 +1,31 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "#content .publishing-details .links .links__item a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": ["#content .body-container", "#article-content"],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "#comments"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".also-read"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".media-block-wrap"
+                }
+            ]
+        }
+    ]
+}

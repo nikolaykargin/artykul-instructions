@@ -1,0 +1,54 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "#article .metadata .byline a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".hints, .read-more, .social-icons"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".metadata"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".c-letters-cta"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "img",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

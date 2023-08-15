@@ -1,8 +1,33 @@
 {
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "article h1"
+        },
+        "description": {
+            "@": "getText",
+            "query": "article h2"
+        },
+        "image": {
+            "@": "getText",
+            "query": "article img"
+        },
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": ".duet--article--article-byline a"
+            }
+        },
+        "publishedTime": {
+            "@": "getAttribute",
+            "query": ".duet--article--date-and-comments time",
+            "attribute": "datetime"
+        }
+    },
     "content": [
         {
             "@": "getElement",
-            "query": "main.content .c-entry-content",
+            "query": "main.feature .c-entry-content",
             "beforeReturn": []
         },
         {

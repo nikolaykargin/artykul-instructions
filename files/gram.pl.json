@@ -1,0 +1,31 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": ".content-top-bar .author",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "#row",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "aside"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".content-top-bar"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".player-container"
+                }
+            ]
+        }
+    ]
+}

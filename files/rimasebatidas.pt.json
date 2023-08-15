@@ -1,0 +1,14 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".single .single__content .wrapper-750",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "h3.red"
+                }
+            ]
+        }
+    ]
+}

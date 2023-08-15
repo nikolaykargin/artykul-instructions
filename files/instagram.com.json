@@ -1,0 +1,59 @@
+{
+    "meta": {
+        "site": {
+            "image": {
+                "@": "getAttribute",
+                "query": "link[rel='apple-touch-icon'][sizes='180x180']",
+                "attribute": "href"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "createElement",
+            "tagName": "body",
+            "content": [
+                {
+                    "@": "createElement",
+                    "tagName": "figure",
+                    "content": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "meta[property='og:image']",
+                                            "attribute": "content"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "@": "createElement",
+                            "tagName": "figcaption",
+                            "content": [
+                                {
+                                    "@": "createElement",
+                                    "tagName": "p",
+                                    "content": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "meta[property='og:description']",
+                                            "attribute": "content"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

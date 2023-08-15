@@ -1,0 +1,44 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "article .article-body__content",
+                "article"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "div[data-testid='GenericCallout']"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".grid-layout__aside"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture:has(noscript img)",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "img",
+                                            "attribute": "src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

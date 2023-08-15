@@ -1,0 +1,31 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article .article_header .article-info_container .article-author_text",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".breadcrumbs"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-info_container"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".see-also-popular_container"
+                }
+            ]
+        }
+    ]
+}

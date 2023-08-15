@@ -1,0 +1,41 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".article-container",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".loading-indicator,#author-info,.article-tools"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".paywall-prompt,.review--in-this-review"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "img[loading='lazy']",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "srcset",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "self",
+                                            "attribute": "srcset"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

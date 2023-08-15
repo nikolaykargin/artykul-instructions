@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article .entry-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "#audioPlayerArticle"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".art_tag"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".lastRecents"
+                }
+            ]
+        }
+    ]
+}

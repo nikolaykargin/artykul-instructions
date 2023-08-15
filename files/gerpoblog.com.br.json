@@ -1,0 +1,18 @@
+{
+    "meta": {
+        "title": {
+            "@": "getText",
+            "query": "h1"
+        },
+        "description": {
+            "@": "constant",
+            "value": ""
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".entry-content"
+        }
+    ]
+}

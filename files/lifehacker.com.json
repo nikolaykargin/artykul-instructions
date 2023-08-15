@@ -1,0 +1,9 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".js_post-content",
+            "beforeReturn": []
+        }
+    ]
+}

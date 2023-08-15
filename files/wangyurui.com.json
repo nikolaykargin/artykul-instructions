@@ -1,0 +1,18 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "article .entry-authors .author_meta",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article *[itemprop=\"articleBody\"]",
+            "beforeReturn": []
+        }
+    ]
+}

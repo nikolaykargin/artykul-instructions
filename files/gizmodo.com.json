@@ -1,0 +1,37 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "main .js_post-content",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".js_ad-dynamic,.instream-permalink"
+                },
+                {
+                    "@": "replaceElement",
+                    "query": "picture.lazy-picture",
+                    "newElements": [
+                        {
+                            "@": "createElement",
+                            "tagName": "img",
+                            "attributes": [
+                                {
+                                    "@": "createAttribute",
+                                    "key": "src",
+                                    "value": [
+                                        {
+                                            "@": "getAttribute",
+                                            "query": "img[data-src]",
+                                            "attribute": "data-src"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

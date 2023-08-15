@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".newsletter-signup,header,.article-toc__fullview,.article-pagination"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-footer,article__footer"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".topicbox"
+                }
+            ]
+        }
+    ]
+}

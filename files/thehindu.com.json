@@ -1,0 +1,26 @@
+{
+    "meta": {
+        "author": {
+            "name": {
+                "@": "getJoinedText",
+                "query": "author a",
+                "separator": ", "
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "queries": [
+                "div[itemprop='articleBody']",
+                ".articlebodycontent"
+            ],
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".also-read"
+                }
+            ]
+        }
+    ]
+}

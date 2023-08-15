@@ -53,7 +53,7 @@ Artykul/1.0 ALCore/1.0 (like TwitterBot)
         modifiedTime?: ALFunctionText
     }
     exists?: (ALFunction = isElementExists)
-    content?: ALFunctionElement[]
+    content?: []ALFunctionElement
 }
 ```
 

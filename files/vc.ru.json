@@ -7,7 +7,11 @@
         "site": {
             "title": {
                 "@": "constant",
-                "value": "vc.ru"
+                "value": "VC.ru"
+            },
+            "image": {
+                "@": "constant",
+                "value": "https://leonardo.osnova.io/a5e6e222-4b24-0aec-6bba-923afa28ca46/-/format/webp/"
             }
         }
     },

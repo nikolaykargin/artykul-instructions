@@ -1,0 +1,20 @@
+{
+    "meta": {
+        "title": { 
+            "@": "getText",
+            "query": "h1"
+        },
+        "author": {
+            "name": {
+                "@": "getText",
+                "query": ".news-author .news-author__author"
+            }
+        }
+    },
+    "content": [
+        {
+            "@": "getElement",
+            "query": ".news-text"
+        }
+    ]
+}
