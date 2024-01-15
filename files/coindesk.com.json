@@ -1,0 +1,22 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": "div[data-module-name=\"article-tags\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-module-name=\"article-disclosure-module\"]"
+                },
+                {
+                    "@": "removeElement",
+                    "query": "div[data-module-name=\"consensus-seo-text\"]"
+                }
+            ]
+        }
+    ]
+}

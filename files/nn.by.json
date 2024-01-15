@@ -1,0 +1,18 @@
+{
+    "content": [
+        {
+            "@": "getElement",
+            "query": "article",
+            "beforeReturn": [
+                {
+                    "@": "removeElement",
+                    "query": ".article-reactions"
+                },
+                {
+                    "@": "removeElement",
+                    "query": ".article-time"
+                }
+            ]
+        }
+    ]
+}
